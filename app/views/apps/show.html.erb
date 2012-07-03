@@ -1,0 +1,19 @@
+<table class="table table-striped">
+	<div class="alert alert-success">
+		<p>Congratulations! Your app with ticket: <%= @app.grs_ticket %> has been submitted!</p>
+	</div>	
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>GRS Ticket</th>
+			<th>Mobile Platform</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td><%= @app.grs_ticket %></td>
+			<td><%= @app.mobile_platform %></td>
+		</tr>
+	</tbody>
+</table>

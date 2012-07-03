@@ -1,8 +1,10 @@
 RailsinstallerDemo::Application.routes.draw do
+    resources :apps
   match '/help', to:'static_pages#help'
   match '/home', to: 'static_pages#home'
   match '/about', to: 'static_pages#about'
-  match '/new', to: 'app#new'
+  match '/new', to: 'apps#new'
+  match '/apps/[:id]', to:'apps#show[:id]'
 
   root :to => "static_pages#home"
   # The priority is based upon order of creation:

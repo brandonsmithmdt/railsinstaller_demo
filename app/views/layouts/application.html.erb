@@ -9,23 +9,12 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <header class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <nav>
-            <ul class="nav pull-left">
-              <a class="brand" href="/">App Submit</a>
-              <li><%= link_to "Submit an app", new_path %></li>
-              <li><%= link_to "Help", help_path %></li>
-              <li><%= link_to "About", about_path %></li>
-            </ul>
-          </nav>
-        </div>
+    <body>
+  	  <%= render 'layouts/header' %>
+      <div class="container">
+        <%= yield %>
+        <%= render 'layouts/footer' %>
+        <%= debug(params) if Rails.env.development? %>
       </div>
-    </header>
-    <div class="container">
-      <%= yield %>
-    </div>
-  </body>
-</html>
+    </body>
+ </html>
