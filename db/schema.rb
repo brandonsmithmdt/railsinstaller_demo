@@ -11,13 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120702214244) do
+ActiveRecord::Schema.define(:version => 20120703181202) do
 
   create_table "apps", :force => true do |t|
     t.integer  "grs_ticket"
     t.string   "mobile_platform"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.date     "release_date"
+    t.float    "version_number"
+    t.string   "name"
+    t.string   "name2"
+    t.string   "business_unit"
+    t.string   "department_visibility"
+    t.string   "department_download"
+    t.string   "region_download"
+    t.string   "development_platform"
+    t.string   "language"
+    t.string   "developer_string"
+    t.text     "special_reqs"
+    t.text     "os_reqs"
+    t.text     "testers"
+    t.text     "vendor_confirmation"
+    t.text     "description"
+    t.text     "version_notes"
+    t.text     "business_owner"
+    t.text     "support_contact"
+    t.text     "source"
   end
 
 end

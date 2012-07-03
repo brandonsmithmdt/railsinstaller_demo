@@ -4,6 +4,7 @@ RailsinstallerDemo::Application.routes.draw do
   match '/home', to: 'static_pages#home'
   match '/about', to: 'static_pages#about'
   match '/new', to: 'apps#new'
+  match 'apps/create', to: 'apps#show[:id]'
   match '/apps/[:id]', to:'apps#show[:id]'
 
   root :to => "static_pages#home"

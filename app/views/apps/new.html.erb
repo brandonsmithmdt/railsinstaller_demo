@@ -1,1 +1,97 @@
 <title>New App</title>
+<h1>Submit an App!</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@app) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :grs_ticket %>
+      <%= f.text_field :grs_ticket %>
+
+      <%= f.label :mobile_platform %>
+      <%= f.text_field :mobile_platform %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :name2 %>
+      <%= f.text_field :name2 %>
+
+		<div class="control-group">
+    	<label class="control-label"><%= f.label :business_unit %></label>
+      	<div class="controls">                 
+        	<%= f.select :business_unit, options_for_select(['All','CRDM','Cardiovascular', 'Neuro', 'Spinal', 'Surgical Technologies', 'Diabetes']) %>
+        </div>
+		</div>
+ 
+         
+     <div class="control-group">
+    	<label class="control-label"><%= f.label :department_visibility %></label>
+      	<div class="controls">                 
+        	<%= f.select :department_visibility, options_for_select(['All','CRDM','Cardiovascular', 'Neuro', 'Spinal', 'Surgical Technologies', 'Diabetes']) %>
+        </div>
+		</div>
+
+     <div class="control-group">
+    	<label class="control-label"><%= f.label :department_download %></label>
+      	<div class="controls">                 
+        	<%= f.select :department_download, options_for_select(['All','CRDM','Cardiovascular', 'Neuro', 'Spinal', 'Surgical Technologies', 'Diabetes']) %>
+        </div>
+		</div>
+
+	 <div class="control-group">
+    	<label class="control-label"><%= f.label :region_download %></label>
+      	<div class="controls">                 
+        	<%= f.select :region_download, options_for_select(['All','CRDM','Cardiovascular', 'Neuro', 'Spinal', 'Surgical Technologies', 'Diabetes']) %>
+        </div>
+		</div>
+
+      <%= f.label :release_date %>
+      <%= f.text_field :release_date %>
+
+      <%= f.label :version_number %>
+      <%= f.text_field :version_number %>
+
+      <%= f.label :development_platform %>
+      <%= f.text_field :development_platform %>
+
+      <%= f.label :language %>
+      <%= f.text_field :language %>
+
+      <%= f.label :special_reqs %>
+      <%= f.text_area :special_reqs %>
+
+      <%= f.label :os_reqs %>
+      <%= f.text_area :os_reqs %>
+
+      <%= f.label :testers %>
+      <%= f.text_area :testers %>
+
+      <%= f.label :vendor_confirmation %>
+      <%= f.text_area :vendor_confirmation %>
+
+      <%= f.label :developer_string %>
+      <%= f.text_field :developer_string %>
+
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+
+      <%= f.label :version_notes %>
+      <%= f.text_area :version_notes %>
+
+      <%= f.label :business_owner %>
+      <%= f.text_field :business_owner %>
+
+      <%= f.label :support_contact %>
+      <%= f.text_field :support_contact %>
+
+      <%= f.label :source %>
+      <%= f.text_area :source %>
+      
+      <br>
+
+      <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
