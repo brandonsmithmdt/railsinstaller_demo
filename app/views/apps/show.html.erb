@@ -1,19 +1,150 @@
-<table class="table table-striped">
+<head>
+<script>
+	$('a[data-toggle="tab"]').on('shown', function (e) {
+  	e.target // activated tab
+  	e.relatedTarget // previous tab
+	})
+</script>
+</head>
+
+<div class="tabbable tabs-left">
 	<div class="alert alert-success">
 		<p>Congratulations! <%= @app.name2 %> has been submitted!</p>
 	</div>	
-	<thead>
-		<tr>
-			<th>#</th>
-			<th>GRS Ticket</th>
-			<th>Mobile Platform</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>1</td>
-			<td><%= @app.grs_ticket %></td>
-			<td><%= @app.mobile_platform %></td>
-		</tr>
-	</tbody>
-</table>
+  <ul class="nav nav-tabs">
+		<li class="active">
+				<a href="#1A" data-toggle="tab">GRS Ticket #</a>
+		</li>	
+		<li>
+				<a href="#1B" data-toggle="tab">Mobile Platform</a>
+		</li>	
+		<li>
+				<a href="#1C" data-toggle="tab">Name</a>
+		</li>	
+		<li>
+				<a href="#1D" data-toggle="tab">Name2</a>
+		</li>	
+		<li>
+				<a href="#1E" data-toggle="tab">Business Unit</a>
+		</li>	
+		<li>
+				<a href="#1F" data-toggle="tab">Department Visibility</a>
+		</li>	
+		<li>
+				<a href="#1G" data-toggle="tab">Department Download</a>
+		</li>	
+		<li>
+				<a href="#1H" data-toggle="tab">Region Download</a>
+		</li>	
+		<li>
+				<a href="#1U" data-toggle="tab">Release Date</a>
+		</li>	
+		<li>
+				<a href="#1V" data-toggle="tab">Version Number</a>
+		</li>	
+		<li>
+				<a href="#1I" data-toggle="tab">Development Platform</a>
+		</li>	
+		<li>
+				<a href="#1J" data-toggle="tab">Language</a>
+		</li>	
+		<li>
+				<a href="#1L" data-toggle="tab">Spcial Requirements</a>
+		</li>	
+		<li>
+				<a href="#1M" data-toggle="tab">OS Requirements</a>
+		</li>	
+		<li>
+				<a href="#1N" data-toggle="tab">Testers</a>
+		</li>	
+		<li>
+				<a href="#1O" data-toggle="tab">Vendor Confirmation</a>
+		</li>	
+		<li>
+				<a href="#1K" data-toggle="tab">Developer String</a>
+		</li>	
+		<li>
+				<a href="#1P" data-toggle="tab">Description</a>
+		</li>	
+		<li>
+				<a href="#1Q" data-toggle="tab">Version Notes</a>
+		</li>	
+		<li>
+				<a href="#1R" data-toggle="tab">Business Owner</a>
+		</li>	
+		<li>
+				<a href="#1S" data-toggle="tab">Support Contact</a>
+		</li>	
+		<li>
+				<a href="#1T" data-toggle="tab">Source</a>
+		</li>	
+  </ul>
+
+  <div class="tab-content">
+  	<div class="tab-pane active" id="1A">
+  		<p><%=  @app.grs_ticket %></p>
+  	</div>	
+  	<div class="tab-pane" id="1B">
+  		<p><%= @app.mobile_platform %></p>
+  	</div>
+  	<div class="tab-pane" id="1C">
+  		<p><%= @app.name %></p>
+  	</div>
+  	<div class="tab-pane" id="1D">
+  		<p><%= @app.name2 %></p>
+  	</div>
+  	<div class="tab-pane" id="1E">
+  		<p><%= @app.business_unit %></p>
+  	</div>
+  	<div class="tab-pane" id="1F">
+  		<p><%= @app.department_visibility %></p>
+  	</div>
+  	<div class="tab-pane" id="1G">
+  		<p><%= @app.department_download %></p>
+  	</div>
+  	<div class="tab-pane" id="1H">
+  		<p><%= @app.region_download %></p>
+  	</div>
+  	<div class="tab-pane" id="1U">
+  		<p><%= @app.release_date %></p>
+  	</div>
+  	<div class="tab-pane" id="1V">
+  		<p><%= @app.version_number %></p>
+  	</div>
+  	<div class="tab-pane" id="1I">
+  		<p><%= @app.development_platform %></p>
+  	</div>
+  	<div class="tab-pane" id="1J">
+  		<p><%= @app.language %></p>
+  	</div>
+  	<div class="tab-pane" id="1L">
+  		<p><%= @app.special_reqs %></p>
+  	</div>
+  	<div class="tab-pane" id="1M">
+  		<p><%= @app.os_reqs %></p>
+  	</div>
+  	<div class="tab-pane" id="1N">
+  		<p><%= @app.testers %></p>
+  	</div>
+  	<div class="tab-pane" id="1O">
+  		<p><%= @app.vendor_confirmation %></p>
+  	</div>
+  	<div class="tab-pane" id="1K">
+  		<p><%= @app.developer_string %></p>
+  	</div>
+  	<div class="tab-pane" id="1P">
+  		<p><%= @app.description %></p>
+  	</div>
+  	<div class="tab-pane" id="1Q">
+  		<p><%= @app.version_notes %></p>
+  	</div>
+  	<div class="tab-pane" id="1R">
+  		<p><%= @app.business_owner %></p>
+  	</div>
+  	<div class="tab-pane" id="1S">
+  		<p><%= @app.support_contact %></p>
+  	</div>
+  	<div class="tab-pane" id="1T">
+  		<p><%= @app.source %></p>
+  	</div>
+</div>
