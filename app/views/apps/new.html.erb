@@ -9,8 +9,12 @@
       <%= f.label :grs_ticket %>
       <%= f.text_field :grs_ticket %>
 
-      <%= f.label :mobile_platform %>
-      <%= f.text_field :mobile_platform %>
+    <div class="control-group">
+    	<label class="control-label"><%= f.label :mobile_platform %></label>
+      	<div class="controls">                 
+        	<%= f.select :mobile_platform, options_for_select(['Android','Blackberry','iPad', 'iPhone', 'iTunes', 'Window']) %>
+        </div>
+		</div>
 
       <%= f.label :name %>
       <%= f.text_field :name %>
@@ -53,8 +57,13 @@
       <%= f.label :version_number %>
       <%= f.text_field :version_number %>
 
-      <%= f.label :development_platform %>
-      <%= f.text_field :development_platform %>
+      <div class="controls">
+      	<%= f.label :development_platform %>
+      	<!-- <%= f.text_field :development_platform %> -->
+      	<input class="input-xlarge focused" id="focusedInput" type="text" value="Xcode (4 or 4.2)">
+      </div>
+      	
+     
 
       <%= f.label :language %>
       <%= f.text_field :language %>
