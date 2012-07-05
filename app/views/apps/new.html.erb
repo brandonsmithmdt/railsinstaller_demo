@@ -6,21 +6,21 @@
     <%= form_for(@app) do |f| %>
       <%= render 'shared/error_messages' %>
 
-      <%= f.label :grs_ticket %>
-      <%= f.text_field :grs_ticket %>
+      GRS Ticket: <%= f.text_field :grs_ticket %>
+
+      <!-- <%= f.label :grs_ticket %> -->
+      <!-- <%= f.text_field :grs_ticket %> -->
 
     <div class="control-group">
-    	<label class="control-label"><%= f.label :mobile_platform %></label>
+    	<!-- <label class="control-label"><%= f.label :mobile_platform %></label> -->
       	<div class="controls">                 
-        	<%= f.select :mobile_platform, options_for_select(['Android','Blackberry','iPad', 'iPhone', 'iTunes', 'Window']) %>
+        	Mobile Platform: <%= f.select :mobile_platform, options_for_select(['Android','Blackberry','iPad', 'iPhone', 'iTunes', 'Window']) %>
         </div>
 		</div>
 
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+      Name (this is the App Store name): <%= f.text_field :name %>
 
-      <%= f.label :name2 %>
-      <%= f.text_field :name2 %>
+      Name2 (this is the device icon name): <%= f.text_field :name2 %>
 
 		<div class="control-group">
     	<label class="control-label"><%= f.label :business_unit %></label>
@@ -51,16 +51,17 @@
         </div>
 		</div>
 
-      <%= f.label :release_date %>
-      <%= f.text_field :release_date %>
+      Release Date (YYYY-MM-DD): <%= f.text_field :release_date %>
 
-      <%= f.label :version_number %>
-      <%= f.text_field :version_number %>
+      Version Number: <%= f.text_field :version_number %>
 
+      
       <div class="controls">
+      	<% @app.development_platform = "Xcode (4 or 4.2)" %>
       	<%= f.label :development_platform %>
-      	<!-- <%= f.text_field :development_platform %> -->
-      	<input class="input-xlarge focused" id="focusedInput" type="text" value="Xcode (4 or 4.2)">
+      	<%= f.text_field :development_platform %> 
+
+      	<!-- <input class="input-xlarge focused" id="focusedInput" type="text" value="Xcode (4 or 4.2)"> -->
       </div>
       	
      
@@ -68,32 +69,25 @@
       <%= f.label :language %>
       <%= f.text_field :language %>
 
-      <%= f.label :special_reqs %>
-      <%= f.text_area :special_reqs %>
+      Special Requirements: <%= f.text_area :special_reqs %>
 
-      <%= f.label :os_reqs %>
-      <%= f.text_area :os_reqs %>
+      OS Requirements: <%= f.text_field :os_reqs %>
 
       <%= f.label :testers %>
       <%= f.text_area :testers %>
 
-      <%= f.label :vendor_confirmation %>
-      <%= f.text_area :vendor_confirmation %>
+      Vendor Confirmation: <%= f.text_area :vendor_confirmation %>
 
-      <%= f.label :developer_string %>
-      <%= f.text_field :developer_string %>
+      Developer: <%= f.text_field :developer_string %>
 
       <%= f.label :description %>
       <%= f.text_area :description %>
 
-      <%= f.label :version_notes %>
-      <%= f.text_area :version_notes %>
+      Version Notes: <%= f.text_area :version_notes %>
 
-      <%= f.label :business_owner %>
-      <%= f.text_field :business_owner %>
+      Business Owner: <%= f.text_field :business_owner %>
 
-      <%= f.label :support_contact %>
-      <%= f.text_field :support_contact %>
+      Support Contact: <%= f.text_area :support_contact %>
 
       <%= f.label :source %>
       <%= f.text_area :source %>

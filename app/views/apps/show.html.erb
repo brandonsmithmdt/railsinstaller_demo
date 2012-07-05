@@ -7,7 +7,105 @@
 </script>
 </head>
 
-<div class="tabbable tabs-left">
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th><strong><em> Property </em></strong></th>
+			<th><strong><em> Value </em></strong></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th> GRS Ticket </th>
+			<th><%= @app.grs_ticket  %> </th>
+		</tr>
+		<tr>
+			<th> Mobile Platform </th>
+			<th><%= @app.mobile_platform  %> </th>
+		</tr>
+		<tr>
+			<th> Name </th>
+			<th><%= @app.name  %> </th>
+		</tr>
+		<tr>
+			<th> Name2 </th>
+			<th><%= @app.name2  %> </th>
+		</tr>
+		<tr>
+			<th> Business Unit </th>
+			<th><%= @app.business_unit  %> </th>
+		</tr>
+		<tr>
+			<th> Department Visibility </th>
+			<th><%= @app.department_visibility  %> </th>
+		</tr>
+		<tr>
+			<th> Department Download </th>
+			<th><%= @app.department_download %> </th>
+		</tr>
+		<tr>
+			<th> Region Download </th>
+			<th><%= @app.region_download %> </th>
+		</tr>
+		<tr>
+			<th> Release date </th>
+			<th><%= @app.release_date %> </th>
+		</tr><tr>
+			<th> Version Number </th>
+			<th><%= @app.version_number %> </th>
+		</tr>
+		<tr>
+			<th> Development Platform </th>
+			<th><%= @app.development_platform %> </th>
+		</tr>
+		<tr>
+			<th> Language </th>
+			<th><%= @app.language %> </th>
+		</tr>
+		<tr>
+			<th> Special Requirements </th>
+			<th><%= @app.special_reqs %> </th>
+		</tr>
+		<tr>
+			<th> OS Requirements </th>
+			<th><%= @app.os_reqs %> </th>
+		</tr>
+		<tr>
+			<th> Testers </th>
+			<th><%= @app.testers %> </th>
+		</tr>
+		<tr>
+			<th> Vendor Confirmation </th>
+			<th><%= @app.vendor_confirmation %> </th>
+		</tr>
+		<tr>
+			<th> Developer String </th>
+			<th><%= @app.developer_string %> </th>
+		</tr>
+		<tr>
+			<th> Description </th>
+			<th><%= @app.description %> </th>
+		</tr>
+		<tr>
+			<th> Version Notes </th>
+			<th><%= @app.version_notes %> </th>
+		</tr>
+		<tr>
+			<th> Business Owner </th>
+			<th><%= @app.business_owner %> </th>
+		</tr>
+		<tr>
+			<th> Support Contact </th>
+			<th><%= @app.support_contact %> </th>
+		</tr>
+		<tr>
+			<th> Source </th>
+			<th><%= @app.source %> </th>
+		</tr>
+	</tbody>
+</table>
+
+<!-- <div class="tabbable tabs-left">
 	<div class="alert alert-success">
 		<p>Congratulations! <%= @app.name2 %> has been submitted!</p>
 	</div>	
@@ -147,4 +245,4 @@
   	<div class="tab-pane" id="1T">
   		<p><%= @app.source %></p>
   	</div>
-</div>
+</div>-->

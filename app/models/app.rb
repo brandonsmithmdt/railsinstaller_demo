@@ -6,11 +6,8 @@ class App < ActiveRecord::Base
 	validates :grs_ticket, presence: true
 	validates :grs_ticket, :numericality => true
 	validates :mobile_platform, presence: true
-	validates :special_reqs, presence: true
-	validates :os_reqs, presence: true
 	validates :testers, presence: true  
 	validates :vendor_confirmation, presence: true  
-	validates :description, presence: true 
 	validates :business_owner, presence: true 
 	validates :support_contact, presence: true
 	validates :source, presence: true 
